@@ -1,30 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link
-    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    rel="stylesheet"
-  />
-  <title>Your Website Title</title>
-  <script src="navbar.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="nav.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-  <div id="nav"></div>
-  <!-- Your HTML content -->
-   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repudiandae cupiditate, nemo esse atque fugit sit delectus! Ratione ullam ipsa cumque nemo. Officiis officia fugit neque nesciunt commodi sapiente numquam!</p>
+  <div id="navbar"></div>
 
+  <script>
+    // Function to load the navigation bar
+    function loadNavbar() {
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+          attachDropdownEventListeners(); // Attach event listeners after loading the navbar
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    }
 
+    // Call the function to load the navigation bar
+    loadNavbar();
 
-   <script>
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav').innerHTML = data;
+    // Function to attach event listeners for dropdown functionality
+    function attachDropdownEventListeners() {
+      const dropdownButtons = document.querySelectorAll('.dropdown-btn');
+      let activeDropdown = null;
+
+      dropdownButtons.forEach((button) => {
+        button.addEventListener('click', (e) => {
+          const dropdownId = button.getAttribute('data-dropdown');
+          const dropdown = document.getElementById(dropdownId);
+
+          if (activeDropdown && activeDropdown !== dropdown) {
+            activeDropdown.classList.remove('active');
+          }
+
+          dropdown.classList.toggle('active');
+          activeDropdown = dropdown.classList.contains('active') ? dropdown : null;
+        });
       });
+
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown') && !e.target.closest('.dropdown-btn')) {
+          if (activeDropdown) {
+            activeDropdown.classList.remove('active');
+            activeDropdown = null;
+          }
+        }
+      });
+
+      const hamburger = document.getElementById('hamburger');
+      const menu = document.querySelector('.menu');
+
+      hamburger.addEventListener('click', () => {
+        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !isExpanded);
+        menu.style.display = isExpanded ? 'none' : 'flex';
+
+        if (isExpanded && activeDropdown) {
+          activeDropdown.classList.remove('active');
+          activeDropdown = null;
+        }
+      });
+    }
   </script>
 </body>
 </html>
