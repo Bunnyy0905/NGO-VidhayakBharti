@@ -1,0 +1,118 @@
+.carousel-item img {
+    height: 60vh;
+    object-fit: contain;
+}
+
+.card-header {
+    font-size: 1.4rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #f8f9fa;
+}
+
+.card-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.1rem;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+.vision-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    margin-top: 20px;
+}
+
+.vision-card .col {
+    text-align: center;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mission-section {
+    margin-top: 20px;
+}
+
+.mission-card {
+    margin: 20px 0;
+}
+
+.mission-card-item {
+    max-width: 18rem;
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+}
+
+
+/* Add responsive styles for mission cards */
+@media (max-width: 576px) {
+    .mission-card .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-card-item {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.circle {
+    width: 180px; /* Increased width */
+    height: 180px; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 1rem; /* Increased font size */
+    padding: 15px; /* Added padding */
+    word-wrap: break-word;
+}
+
+.bg-circle-1 {
+    background-color: #007bff; /* Blue */
+}
+
+.bg-circle-2 {
+    background-color: #28a745; /* Green */
+}
+
+.bg-circle-3 {
+    background-color: #ffc107; /* Yellow */
+}
+
+.bg-circle-4 {
+    background-color: #dc3545; /* Red */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .circle {
+        width: 140px; /* Adjusted width for smaller screens */
+        height: 140px; /* Adjusted height for smaller screens */
+        font-size: 0.9rem; /* Adjusted font size for smaller screens */
+    }
+}
+
+h2 {
+    font-family: 'Arial', sans-serif; /* Changed font family */
+    font-size: 2rem; /* Adjusted font size */
+    font-weight: bold; /* Made the font bold */
+    color: #333; /* Darker color for the heading */
+}
+
+
+
+

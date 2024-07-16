@@ -13,19 +13,19 @@
   </head>
   <body>
     <header id="nav-menu" aria-label="navigation bar">
-      <div class="container">
+      <div class="navcontainer">
         <div class="nav-start">
-          <a class="logo" href="/">
+          <a class="logo" href="">
             <img
               src="/assets/images/logo.png"
               class="logo-image"
               alt="Logo"
             />
           </a>
-          <nav class="menu">
+          <nav class="menu navbar-custom-z">
             <ul class="menu-bar">
               <li><a class="nav-link" href="home.html">Home</a></li>
-              <li><a class="nav-link" href="#about">About Us</a></li>
+              <li><a class="nav-link" href="about.html">About Us</a></li>
               <li>
                 <button
                   class="nav-link dropdown-btn"
@@ -40,10 +40,10 @@
                 <div id="dropdown1" class="dropdown">
                   <ul role="menu">
                     <li role="menuitem">
-                      <a class="dropdown-link" href="#legal">Legal</a>
+                      <a class="dropdown-link" href="legalR.html">Legal Resources</a>
                     </li>
                     <li role="menuitem">
-                      <a class="dropdown-link" href="#vibha">Vibha</a>
+                      <a class="dropdown-link" href="VibhaR.html">Vibha Resources</a>
                     </li>
                   </ul>
                 </div>
@@ -62,10 +62,10 @@
                 <div id="dropdown2" class="dropdown">
                   <ul role="menu">
                     <li role="menuitem">
-                      <a class="dropdown-link" href="#articles">Articles</a>
+                      <a class="dropdown-link" href="Articles.html">Articles</a>
                     </li>
                     <li role="menuitem">
-                      <a class="dropdown-link" href="#post">Post</a>
+                      <a class="dropdown-link" href="post.html">Post</a>
                     </li>
                   </ul>
                 </div>
@@ -84,20 +84,20 @@
                 <div id="dropdown3" class="dropdown">
                   <ul role="menu">
                     <li role="menuitem">
-                      <a class="dropdown-link" href="#volunteer">Volunteer</a>
+                      <a class="dropdown-link" href="Volunteer.html">Volunteer</a>
                     </li>
                     <li role="menuitem">
-                      <a class="dropdown-link" href="#donate">Donate</a>
+                      <a class="dropdown-link" href="Donate.html">Donate</a>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li><a class="nav-link" href="/">About</a></li>
+              
             </ul>
           </nav>
         </div>
         <div class="nav-end">
-          <button class="btn btn-primary">Donate</button>
+          <button class="btn btn-primary" onclick="window.location.href='donate.html'">Donate</button>
           <button
             id="hamburger"
             aria-label="hamburger"

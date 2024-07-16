@@ -72,7 +72,7 @@ button {
   border-bottom: var(--border);
 }
 
-.container {
+.navcontainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,9 +84,15 @@ button {
 }
 
 .menu {
-  position: relative;
+  padding-top: 1rem;
+  /* position: relative; */
   background: var(--white);
 }
+.navbar-custom-z {
+  position: relative; /* Ensure the navbar is positioned */
+  z-index: 3; /* Higher z-index to stay on top */
+}
+
 
 .menu-bar li:first-child .dropdown {
   flex-direction: initial;
@@ -133,7 +139,7 @@ button {
   background-color: var(--white);
   border-radius: 10px;
   position: absolute;
-  top: 36px;
+  top: 45px;
   z-index: 1;
   visibility: hidden;
   opacity: 0;
