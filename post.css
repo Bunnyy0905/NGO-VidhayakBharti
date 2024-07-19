@@ -6,7 +6,6 @@
 
 body {
     min-height: 100vh;
-    /* overflow: hidden; */
 }
 
 .more{
@@ -16,17 +15,7 @@ body {
     align-items: center;
 }
 
-/* .more-main {
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
-    column-gap: 10px;
-    row-gap: 10px;
-    margin-bottom: 20px;
-} */
+
 .more-main {
     
     justify-content: center;
@@ -66,7 +55,6 @@ body {
     height: 300px;
     border-radius: 5px;
     cursor: pointer;
-    /* object-fit:cover; */
     object-position: center;
     transition: .2s ease;
 }
@@ -76,7 +64,6 @@ body {
     width: 250px;
     height: 300px;
     overflow: hidden;
-    /* display: inline-block; */
 }
 
 .btn-show-more, .btn-show-less{
