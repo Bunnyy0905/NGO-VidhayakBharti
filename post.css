@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /* overflow: hidden; */
+}
+
+.more{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .more-main {
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 20px;
+} */
+.more-main {
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5rem;
+    row-gap: 1.5rem;
+    margin-bottom: 20px;
+
+}
+
+.more-heading h1{
+    text-align: center;
+    padding-top: 5%;
+    font-size: 40px;
+    margin: 20px auto;
+    font-weight: 600;
+    position: relative;
+}
+
+.more-heading h1::after {
+    content: '';
+    background: crimson;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.more-image img {
+    width: 250px;
+    height: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* object-fit:cover; */
+    object-position: center;
+    transition: .2s ease;
+}
+
+.more-container {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    /* display: inline-block; */
+}
+
+.btn-show-more, .btn-show-less{
+    display:block;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    font-size: 1.1em;
+    width: fit-content;
+    border: 1px solid crimson;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s ease;  
+}
+
+.btn-show-more:hover,
+.btn-show-less:hover{
+    background: crimson;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+.btn-show-less {
+    display: none;  /* Initially hide the "Show Less" button */ 
+}
+
+
